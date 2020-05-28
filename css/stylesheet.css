@@ -1,0 +1,265 @@
+/*https://grid.layoutit.com/?id=YknCHMs*/
+
+/*grid stuff*/
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 98vw;
+	grid-template-rows: max-content 1fr;
+	gap: 3px 1px;
+	grid-template-areas: "input-section" "results-section";
+}
+#input-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/*grid-template-rows: 1fr;*/
+	gap: 1px 1px;
+	grid-template-areas: "text-input options-input";
+	grid-area: input-section;
+}
+#text-input {
+	grid-area: text-input;
+}
+#options-input {
+	grid-area: options-input;
+}
+#results-section {
+	display: grid;
+	grid-template-columns: 98vw;
+	grid-template-rows: max-content max-content auto;
+	gap: 1px 1px;
+	grid-template-areas: "reg-results" "reg-graph" "reg-table";
+	grid-area: results-section;
+}
+#reg-table-container {
+	grid-area: reg-table;
+}
+#reg-graphs-container {
+  grid-area: reg-graph;
+}
+#reg-result {
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1px 1px;
+	grid-template-areas: "# # #" "# # #";
+	grid-area: reg-result;
+}
+
+
+/*Table Stuff*/
+
+/*
+th {
+  background: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  text-align: left;
+  position: relative;
+  border-collapse: collapse; 
+}
+th, td {
+  border-bottom: 0.1rem solid #e1e1e1;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+}
+*/
+
+.content-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+}
+
+.content-table thead th{
+  /*background-color: aquamarine;
+  color: white;*/
+  background-color: white;
+  text-align: right;
+  font-weight: bold;
+}
+
+.content-table th, td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid lightslategray;
+  text-align: right;
+}
+
+.content-table tr:hover {
+  background-color: lightgrey;
+}
+
+/*
+.content-table tbody tr:nth-of-type(even) {
+  background-color: lightgray
+}
+*/
+
+.sticky-table th{
+  position: sticky;
+  top: 0;
+}
+
+.sticky-table th::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+
+/*FAB*/
+
+html {
+  scroll-behavior: smooth
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-color: aquamarine;
+}
+
+.fab:hover > i {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.fab i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 24px;
+  border-radius: 100%;
+}
+
+.fab-options {
+  list-style-type: none;
+  margin: 0;
+  display: none;
+
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+}
+
+.fab-options > li > .fab {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+
+.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94);animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94)}
+@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+.slide-out-bottom{-webkit-animation:slide-out-bottom .5s cubic-bezier(.55,.085,.68,.53);animation:slide-out-bottom .5s cubic-bezier(.55,.085,.68,.53)}
+@-webkit-keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}
+
+/*Error Notification*/
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  display: none;
+}
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/*Calculate Mat Design Button*/
+#calculate-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  margin-top: 5px;
+  margin-left: 4px;
+
+  height: 36px;
+  border-radius: 5px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+#calculate-button:hover {
+  filter: brightness(95%)
+}
+#calculate-button:active {
+  filter: brightness(85%)
+}
+
+
+/*Misc*/
+
+
+.text-input {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  width: 75%;
+}
+
+body {
+  font-family: "Roboto"
+}
+
+#options-input {
+  margin: 0 auto;
+}
+
+#precision-input {
+  float: left;
+  margin-right: 0.75em;
+  width: calc(75% - calc(1em + 5px));
+}
+
+#regression-type-input > div {
+  margin-bottom: 2.75px;
+}
+
+html {
+  background-color: #FDFFFC;
+  color: #2B303A;
+}
