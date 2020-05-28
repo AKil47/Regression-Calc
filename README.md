@@ -1,5 +1,5 @@
 # Regression-Calc
-A simple online tool and library that applies multiple Least-Squares Regression methods to a set of X and Y values. The tool fits a variety of well defined functions and displays a graph along with error calculations to help find the best approximation.
+A simple online tool and library that applies multiple Least-Squares Regression methods to a set of X and Y values. The tool fits a variety of well defined functions and displays a graph along with error calculations to help find the best approximation. This allows for the creation and testing of well-defined mathematical models from a set of input data.
 
 The mathematics and logic of the application can be used separately through the included `regression` library (see below).
 
