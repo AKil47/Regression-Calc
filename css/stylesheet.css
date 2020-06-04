@@ -140,6 +140,7 @@ html {
   height: 56px;
   border-radius: 100%;
   background-color: aquamarine;
+  display: inline-block;
 }
 
 .fab:hover > i {
